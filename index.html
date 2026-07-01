@@ -53,6 +53,10 @@
   img{max-width:100%; display:block;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
   section{position:relative;}
+  @media (max-width:480px){
+    .wrap{padding:0 20px;}
+    body{font-size:16px;}
+  }
 
   /* ---------- decorative floating butterflies ---------- */
   .bfly{position:absolute; width:34px; height:34px; opacity:0.85; animation:flutter 7s ease-in-out infinite; pointer-events:none; z-index:2;}
@@ -136,6 +140,12 @@
   .hero-grid{
     display:grid; grid-template-columns:1.05fr 0.95fr; gap:50px; align-items:center;
   }
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr; gap:44px; text-align:center;}
+    .hero-art{order:-1;}
+    .hero-ctas{justify-content:center;}
+    .hero p.lead{margin-left:auto; margin-right:auto;}
+  }
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px;
     background:var(--pink-pale); color:var(--pink-deep);
@@ -184,6 +194,10 @@
     background: linear-gradient(150deg, var(--leaf-pale), var(--pink-pale) 55%, var(--lilac-pale));
     display:flex; align-items:center; justify-content:center;
     box-shadow: var(--shadow);
+    margin:0 auto;
+  }
+  @media (max-width:520px){
+    .hero-blob{max-width:280px;}
   }
   .hero-blob img{width:78%;}
   .hero-art .bfly{top:6%; right:2%;}
@@ -415,6 +429,28 @@
   .foot-bottom{
     margin-top:30px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.12);
     font-size:0.82rem; color:rgba(255,255,255,0.5); text-align:center;
+  }
+
+  /* ---------- responsive spacing tune-up (mobile) ---------- */
+  @media (max-width:768px){
+    .hero{padding:52px 0 44px;}
+    .sobre{padding:64px 0 56px;}
+    .servicos{padding:64px 0;}
+    .equipe{padding:64px 0 56px;}
+    .diferenciais{padding:64px 0;}
+    .local{padding:64px 0 56px;}
+    .cta-final{padding:64px 0;}
+    .sec-head{margin-bottom:36px;}
+    .serv-card{padding:28px 24px;}
+    .local-card{padding:28px 24px;}
+    .navbar img{height:40px;}
+  }
+  @media (max-width:480px){
+    .hero-ctas{flex-direction:column; align-items:stretch;}
+    .hero-ctas .btn{justify-content:center;}
+    .foot-grid{flex-direction:column; text-align:center;}
+    .wa-float{width:52px; height:52px; bottom:16px; right:16px;}
+    .wa-float svg{width:26px; height:26px;}
   }
 
   /* WhatsApp floating button */
